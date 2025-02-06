@@ -1,0 +1,246 @@
+:root{
+  --accent-color-100: #f9f7fa;
+  --accent-color-300: #efe6f2;
+  --accent-color-700: #B0AEC3;
+  --primary-color-000: black;
+
+  --size-600: 4em;
+  --size-500: 3em;
+  --size-300: 1em;
+}
+
+.secondary-font{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.size-600{
+  font-size: var(--size-600);
+}
+
+
+body {
+  background-image: url(bkg-index.png);
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  margin: 0;
+  border-right: 10vw solid var(--accent-color-700);
+  border-left: 10vw solid var(--accent-color-700);
+}
+
+@media(max-width: 800px){
+  body{
+    border-right: transparent;
+    border-left: transparent;
+  }
+}
+
+header{
+  margin: 0;
+  position: sticky;
+  left: 0;
+  top: 0;
+  height: 46px;
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.primary-navigation{
+  padding: 10px;
+  display: flex;
+  margin: 0;
+  list-style-type: none;
+  justify-content: right;
+}
+
+#menu-button, #close-button {
+  display: none;
+}
+
+
+.primary-navigation > li > a{
+  padding: 10px;
+  height: 100%;
+  text-decoration: none;
+  color: var(--primary-color-000);
+  margin-right: 2vw;
+}
+
+.primary-navigation a:hover{
+  color: var(--accent-color-700);
+}
+
+@media(max-width: 800px){
+  .primary-navigation{
+    display: none;
+  }
+  #menu-button, #close-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    margin: 5px;
+
+  }
+
+  #menu-button{
+    display: block;
+  }
+
+  .primary-navigation{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(176, 174, 195, 0.9);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20vw;
+    gap: 20px;
+  }
+
+
+  .primary-navigation > li > a {
+    padding-right: 80px;
+    padding-left: 80px;
+    color: white;
+    margin: 0;
+    font-size: var(--size-300);
+  }
+
+  .primary-navigation > li > a:hover{
+    color: var(--accent-color-300);
+  }
+}
+
+select {
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+select:hover{
+  color: var(--accent-color-700);
+}
+
+
+.primary-headline{
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  padding: 2vw;
+  text-align: center;
+  background-color: var(--accent-color-300);
+}
+
+@media(max-width: 800px){
+  .primary-headline{
+    font-size: var(--size-500);
+  }
+}
+
+@media(max-width: 500px){
+  .primary-headline{
+    padding-left: 2vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+}
+
+.even-columns{
+  display: flex;
+  flex-direction: column;
+  max-width: 90%;
+  gap: 1.5vw;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--accent-color-100);
+  align-items: center;
+  padding: 1vw;
+}
+
+.even-columns:not(.last-instance){
+  margin-bottom: 2vw;
+}
+
+.even-columns > *{
+  flex: 1;
+
+}
+
+.even-columns > p{
+  padding-left: 3vw;
+  padding-right: 3vw;
+  padding-top: 1vw;
+  border-top: solid var(--accent-color-300);
+}
+
+
+#carouselMe, #carouselCode {
+  width: 30vw !important;
+}
+
+#carouselArt {
+  width: 20vw !important;
+}
+
+@media(max-width: 800px){
+  #carouselMe, #carouselCode {
+    width: 50vw !important;
+  }
+
+  #carouselArt {
+    width: 40vw !important;
+  }
+}
+
+@media(max-width: 500px){
+  #carouselMe, #carouselCode {
+    width: 70vw !important;
+    padding-bottom: 2vw;
+  }
+
+  #carouselArt {
+    width: 60vw !important;
+    padding-bottom: 2vw;
+  }
+}
+
+
+.even-columns > .text-wrapper > p{
+  max-width: 90%;
+  padding: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.poem {
+  max-width: 90%;
+}
+
+.even-columns > .text-wrapper > #carousel-photos{
+  width: 30vw !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media(max-width: 800px){
+  .even-columns > .text-wrapper > #carousel-photos{
+    width: 50vw !important;
+    margin-bottom: 2vw;
+  }
+}
+
+@media(max-width: 800px){
+  .even-columns > .text-wrapper > #carousel-photos{
+    width: 70vw !important;
+  }
+}

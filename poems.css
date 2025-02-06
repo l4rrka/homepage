@@ -1,0 +1,267 @@
+/* Main HTML */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no repeat;
+    background-position: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#borderl{
+    position:absolute;
+    top: 50px;
+    z-index: 1;
+}
+
+#borderl1{
+    position:absolute;
+    top: 350px;
+    z-index: 1;
+}
+
+
+#borderr{
+    position:absolute;
+    right:0;
+    top: 50px;
+    z-index: 1;
+}
+
+#borderr1{
+    position:absolute;
+    right:0;
+    top: 350px;
+    z-index: 1;
+}
+
+
+
+
+/* Navigation */
+
+select{
+    position: absolute;
+    padding: 13.5px 12px;
+    z-index: 999;
+    border: none;
+}
+
+
+nav{
+    background-color: white;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
+}
+
+nav li{
+    height: 50px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.sidebar li{
+    width: 100%;
+}
+
+.sidebar a{
+    width: 100%;
+}
+
+.menu-button{
+    display:none;
+}
+
+/*WELCOME Section*/
+
+#title{
+    display: none;
+}
+
+.title{
+    text-align: center;
+    position: relative;
+    padding: 1vw 2vw;
+    font-size: 4.5vw;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#poem{
+    position:relative;
+    float:right;
+    top: 2vh;
+    right:20vw;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 2vw;
+    color: white;
+}
+
+#accordionPoem{
+    position: relative;
+    float: left;
+    width: 30%;
+    left: 18vw;
+    top: 2vh;
+}
+
+
+#carouselMe{
+    display: inline;
+    width: 20%;
+    float:left;
+    position: relative;
+    top: 6vw;
+    left: -8vw;
+    z-index: -1;
+}
+
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+
+/*Tablet devices*/
+
+@media(max-width:1335px){
+    .borders{
+        display:none;
+    }
+    #accordionPoem{
+        left: 7vw;
+        width:40vw;
+    }
+    #poem{
+        right: 10vw;
+    }
+    #carouselMe{
+        left: -30vw;
+        width: 25%;
+        top: 8vw;
+    }
+}
+
+@media(max-width: 1052px){
+    #carouselMe{
+        left: 10vw;
+        width: 30%;
+        top: 5vw;
+    }
+}
+
+@media(max-width: 900px){
+
+    .title{
+        display:none;
+    }
+
+    #title{
+        padding: 1vw 2vw;
+        margin: 2vw 5vw;
+        font-size: 8vw;
+        font-family: 'Montserrat', sans-serif;
+        display: block;
+        clear:both;
+        top: 20vh;
+        left: 20vw;
+        z-index: 999;
+        text-align: center;
+
+    }
+
+    #accordionPoem{
+        left: 6vw;
+    }
+    #poem{
+        right: 6vw;
+        width: 40vw;
+        font-size: 2vw;
+    }
+
+
+    #carouselMe{
+        display: block;
+        width: 40%;
+        float:left;
+        position: relative;
+        top: 8vw;
+        left: 6vw;
+    }
+
+    .accordion-body{
+        font-size: 2vw;
+    }
+}
+
+@media(max-width: 576px){
+    body{
+        background-position: left;
+    }
+
+
+
+    #carouselMe{
+        display: block;
+        width: 40%;
+        float:left;
+        position: relative;
+        top: 8vw;
+        left: 6vw;
+    }
+    #poem{
+        font-size: 2.5vw;
+    }
+
+    button.accordion{
+        font-size: 2vw !important;
+    }
+}
+
+/*Phones*/
+
+@media(max-width: 431px){
+    .sidebar{
+        width:100%;
+    }
+}

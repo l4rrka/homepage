@@ -1,0 +1,17 @@
+:root{
+    --accent-color-100: #f7faf9;
+    --accent-color-300: #e6f2ee;
+    --accent-color-700: #aec3be;
+}
+
+
+@media(max-width: 800px){
+   .primary-navigation{
+        background-color: rgba(174, 195, 190, 0.9);
+    }
+}
+
+.even-columns{
+    margin-bottom: 0 !important;
+}
+
